@@ -42,7 +42,9 @@ struct ContentView: View {
             }
         }
         .sheet(isPresented: $issheetpresent) {
-            descriptView()
+            if let selectedfruit = selectedfruit {
+                    descriptView(fruit: selectedfruit)
+                }
         }
     }
 }
