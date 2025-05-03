@@ -20,9 +20,23 @@ struct ContentView: View {
             
             ScrollView{
                 VStack {
+                    HStack{
+                        Image(systemName: "fork.knife.circle.fill")
+                            .font(.system(size: 30))
+                            .colorInvert()
+                        Text("FRUTAS")
+                            .font(.title)
+                            .bold()
+                            .foregroundColor(.white)
+                        Image(systemName: "fork.knife.circle.fill")
+                            .font(.system(size: 30))
+                            .colorInvert()
+                            
+                    }
                     ForEach(file.frutas){ Fruit in
                         Text(Fruit.name)
                             .font(.title)
+                            .bold()
                             .frame(height: 50)
                             .frame(maxWidth: .infinity)
                             .foregroundColor(.white)
